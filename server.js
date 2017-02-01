@@ -5,7 +5,7 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
-
+app.use('/app',express.static(path.join(__dirname, 'app')));
 
 var server = require('http').createServer(app);
 
