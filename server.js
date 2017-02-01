@@ -1,10 +1,9 @@
 var express = require('express');
-
+var path = require('path');
 var app = express();
 
 /* /css matches the route and public tells where the css folder is located */
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(path.join(__dirname,'public')));
 
 
 var server = require('http').createServer(app);
