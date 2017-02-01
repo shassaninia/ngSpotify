@@ -3,8 +3,8 @@ var path = require('path');
 var app = express();
 
 
-app.use(express.static(path.join(__dirname,'public')));
-app.use(express.static(path.join(__dirname,'node_modules')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 var server = require('http').createServer(app);
 
